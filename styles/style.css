@@ -2,10 +2,11 @@
   position: relative;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   min-height: 100vh;
-  background-color: rgb(243, 240, 54);
+  background-color: #f3f036;
 }
 
 .container {
@@ -26,12 +27,14 @@
 
 .shutter.top {
   top: 0;
-  animation: slide-top 2s 2s forwards 1;
+  -webkit-animation: slide-top 2s 2s forwards 1;
+          animation: slide-top 2s 2s forwards 1;
 }
 
 .shutter.bottom {
   bottom: 0;
-  animation: slide-bottom 2s 2s forwards 1;
+  -webkit-animation: slide-bottom 2s 2s forwards 1;
+          animation: slide-bottom 2s 2s forwards 1;
 }
 
 .shutter.top::after {
@@ -39,10 +42,20 @@
   position: absolute;
   height: 0.3rem;
   width: 100%;
-  background-color: rgb(243, 240, 54);
+  background-color: #f3f036;
   bottom: 0;
   left: -100%;
-  animation: slide-in-out 1s 1s forwards 1;
+  -webkit-animation: slide-in-out 1s 1s forwards 1;
+          animation: slide-in-out 1s 1s forwards 1;
+}
+
+@-webkit-keyframes slide-in-out {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 @keyframes slide-in-out {
@@ -51,6 +64,15 @@
   }
   100% {
     left: 100%;
+  }
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
   }
 }
 
@@ -63,6 +85,15 @@
   }
 }
 
+@-webkit-keyframes slide-bottom {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -100%;
+  }
+}
+
 @keyframes slide-bottom {
   0% {
     bottom: 0;
@@ -71,3 +102,19 @@
     bottom: -100%;
   }
 }
+
+.header {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+}
+
+.header__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=style.css.map */
