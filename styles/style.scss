@@ -1,12 +1,10 @@
-$top_margin: 8rem;
-
 .app {
+  // position: relative;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   width: 100%;
   min-height: 100vh;
-  position: relative;
   background-color: rgb(243, 240, 54);
 }
 
@@ -31,12 +29,12 @@ $top_margin: 8rem;
 
 .shutter.top {
   top: 0;
-  animation: slide-top 0.8s 0.8s forwards 1;
+  animation: slide-top 1.5s 1.5s forwards 1;
 }
 
 .shutter.bottom {
   bottom: 0;
-  animation: slide-bottom 0.8s 0.8s forwards 1;
+  animation: slide-bottom 1.5s 1.5s forwards 1;
 }
 
 .shutter.top::after {
@@ -47,7 +45,7 @@ $top_margin: 8rem;
   background-color: rgb(243, 240, 54);
   bottom: 0;
   left: -100%;
-  animation: slide-in-out 0.25s 0.25s forwards 1;
+  animation: slide-in-out 0.5s 0.5s forwards 1;
 }
 
 @keyframes slide-in-out {
@@ -64,7 +62,7 @@ $top_margin: 8rem;
     top: 0;
   }
   100% {
-    top: -30%;
+    top: -50%;
   }
 }
 
@@ -73,43 +71,51 @@ $top_margin: 8rem;
     bottom: 0;
   }
   100% {
-    bottom: -40%;
+    bottom: -50%;
   }
 }
 
 .header {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgb(0, 0, 0);
   width: 100%;
-  top: 0;
-  height: $top_margin;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  // &__text {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   align-items: center;
-  // }
+  &__text {
+    color: rgb(253, 253, 253);
+    width: 70%;
+    margin: 0 auto;
+
+    &__nav {
+      &__ul {
+        padding: 0;
+
+        &__li {
+          display: inline-block;
+          margin: 0.5rem;
+
+          & a {
+            text-align: end;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 .main {
-  position: relative;
   width: 70%;
   margin: 0 auto;
-  margin-top: $top_margin + 1rem;
 }
 
 @media screen and (max-width: 1500px) {
-  .main {
+  .main .header__text {
     width: 75%;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  .main {
+  .main .header__text {
     width: 85%;
   }
 }
