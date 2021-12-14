@@ -1,5 +1,5 @@
 .app {
-  // position: relative;
+  position: relative;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -109,22 +109,26 @@
 }
 
 @media screen and (max-width: 1500px) {
-  .main .header__text {
+  .main,
+  .header__text {
     width: 75%;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  .main .header__text {
+  .main,
+  .header__text {
     width: 85%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main,
+  .header__text {
+    width: 90%;
   }
 }
 
 .blue {
   background-color: aquamarine;
-}
-
-.winner {
-  background-color: rgb(178, 204, 28);
-  box-shadow: inset 0px 0px 66px 5px rgb(248, 248, 248);
 }

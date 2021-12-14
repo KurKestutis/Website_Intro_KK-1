@@ -1,4 +1,5 @@
 .app {
+  position: relative;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -141,24 +142,27 @@
 }
 
 @media screen and (max-width: 1500px) {
-  .main .header__text {
+  .main,
+  .header__text {
     width: 75%;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  .main .header__text {
+  .main,
+  .header__text {
     width: 85%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main,
+  .header__text {
+    width: 90%;
   }
 }
 
 .blue {
   background-color: aquamarine;
-}
-
-.winner {
-  background-color: #b2cc1c;
-  -webkit-box-shadow: inset 0px 0px 66px 5px #f8f8f8;
-          box-shadow: inset 0px 0px 66px 5px #f8f8f8;
 }
 /*# sourceMappingURL=style.css.map */
