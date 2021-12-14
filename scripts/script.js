@@ -1,6 +1,10 @@
-// const shuttersID = document.getElementById("intro-shuters");
-// const bottom = document.querySelector(".bottom");
+const shuttersID = document.getElementById("intro-shuters");
+const header = document.getElementById("headerID");
 
-// setTimeout(() => {
-//   bottom.classList.add();
-// }, 1500);
+setTimeout(() => {
+  shuttersID.remove();
+}, 2500);
+
+setTimeout(() => {
+  header.classList.add("header");
+}, 2000);
